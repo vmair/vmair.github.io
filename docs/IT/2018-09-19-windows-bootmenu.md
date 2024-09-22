@@ -1,6 +1,8 @@
 ---
 title: 浅谈windows多系统及其启动菜单   
-date: 2018-09-19	
+date: 2018-09-19
+
+parent: 其他教程	
 
 
 
