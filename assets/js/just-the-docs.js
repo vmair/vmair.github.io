@@ -206,6 +206,7 @@ function searchLoaded(index, docs) {
     });  
     });
     */
+    
     var results = index.query(function (query) {
       var tokens = lunr.tokenizer(input)
       query.term(tokens, {
