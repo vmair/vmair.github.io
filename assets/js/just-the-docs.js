@@ -186,7 +186,7 @@ function searchLoaded(index, docs) {
       return;
     }
 
-    lunr.tokenizer = function (input) {  
+    /*lunr.tokenizer = function (input) {  
     // 正则表达式匹配中文字符和英文单词  
     return input.match(/[\u4e00-\u9fa5]+|[a-zA-Z]+/g) || [];  
     };  
@@ -205,8 +205,8 @@ function searchLoaded(index, docs) {
         });  
     });  
     });
-    
-    /*var results = index.query(function (query) {
+    */
+    var results = index.query(function (query) {
       var tokens = lunr.tokenizer(input)
       query.term(tokens, {
         boost: 10
@@ -214,7 +214,7 @@ function searchLoaded(index, docs) {
       query.term(tokens, {
         wildcard: lunr.Query.wildcard.TRAILING
       });
-    });*/
+    });
 
     if ((results.length == 0) && (input.length > 2)) {
       var tokens = lunr.tokenizer(input).filter(function(token, i) {
