@@ -190,16 +190,7 @@ function searchLoaded(index, docs) {
     // 正则表达式匹配中文字符和英文单词  
     return input.match(/[\u4e00-\u9fa5]+|[a-zA-Z]+/g) || [];  
     };  
-    var index = lunr(function () {  
-    this.field('title');   // 定义索引的字段  
-    this.field('content');  
 
-    // 将文档添加到索引中  
-    documents.forEach(function (doc) {  
-        this.add(doc);  
-    }, this);  
-    });  
-    
     var results = index.query(function (query) {  
     // 使用自定义的分词器，将输入分词  
     var tokens = lunr.tokenizer(input);  
@@ -213,7 +204,7 @@ function searchLoaded(index, docs) {
             wildcard: lunr.Query.wildcard.TRAILING // 使用通配符匹配  
         });  
     });  
-});
+    });
     
     /*var results = index.query(function (query) {
       var tokens = lunr.tokenizer(input)
