@@ -186,28 +186,6 @@ function searchLoaded(index, docs) {
       return;
     }
 
-   /* lunr.tokenizer = function (input) {  
-    // 正则表达式匹配中文字符和英文单词  
-    return input.match(/[\u4e00-\u9fa5]+|[a-zA-Z]+/g) || [];  
-    };  */
-
-    var results = index.query(function (query) {  
-    // 使用自定义的分词器，将输入分词  
-    var tokens = lunr.tokenizer(input);  
-
-    // 对每个分词进行查询  
-    tokens.forEach(function (token) {  
-        query.term(token, {  
-            boost: 10 // 加权  
-        });  
-        query.term(token, {  
-            wildcard: lunr.Query.wildcard.TRAILING // 使用通配符匹配  
-        });  
-    });  
-    });
-    
- 
- /*   
     var results = index.query(function (query) {
       var tokens = lunr.tokenizer(input)
       query.term(tokens, {
@@ -217,8 +195,6 @@ function searchLoaded(index, docs) {
         wildcard: lunr.Query.wildcard.TRAILING
       });
     });
-*/
-
 
     if ((results.length == 0) && (input.length > 2)) {
       var tokens = lunr.tokenizer(input).filter(function(token, i) {
