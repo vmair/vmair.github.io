@@ -1,18 +1,21 @@
 ---
-title: Home
+title: 主页
 layout: home
 nav_order: 1
 permalink: /
 ---
 
-# About the blog
-{: .fs-9 }
+##### 此博客的内容主要有：
 
-Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.
-{: .fs-6 .fw-300 }
+- 编程相关知识点；
+
+- SolidWorks相关使用技巧；
+
+- 个人一些阶段性不成熟思考；
+
+- 常用工具、软件、插件、第三方库、书籍等等的快速链接；
 
 ---
 
-{: .warning }
-> This website documents the features of the current `main` branch of the Just the Docs theme. See [the CHANGELOG]({% link CHANGELOG.md %}) for a list of releases, new features, and bug fixes.
+
 
