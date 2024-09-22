@@ -2,7 +2,6 @@
 title: 主页
 layout: home
 nav_order: 1
-permalink: /
 ---
 
 ### 此博客的内容主要有：
