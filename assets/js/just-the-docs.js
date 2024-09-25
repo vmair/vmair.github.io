@@ -102,7 +102,7 @@ function initSearch() {
       var docs = JSON.parse(request.responseText);
       lunr.tokenizer.separator = {{ site.search.tokenizer_separator | default: site.search_tokenizer_separator | default: "/[\s\-/]+/" }}
       var index = lunr(function(){
-        this.use(lunr.multiLanguage('es', 'zh'));
+        this.use(lunr.multiLanguage('en', 'zh'));
         this.ref('id');
         this.field('title', { boost: 200 });
         this.field('content', { boost: 100 });
